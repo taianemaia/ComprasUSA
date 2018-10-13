@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2370938321713106006B986A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938221713106006B986A /* AppDelegate.swift */; };
-		2370938521713106006B986A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938421713106006B986A /* ViewController.swift */; };
+		2370938521713106006B986A /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938421713106006B986A /* ShoppingListViewController.swift */; };
 		2370938821713106006B986A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370938621713106006B986A /* Main.storyboard */; };
 		2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2370938921713106006B986A /* TaianeVinicius.xcdatamodeld */; };
 		2370938D21713107006B986A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2370938C21713107006B986A /* Assets.xcassets */; };
 		2370939021713107006B986A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370938E21713107006B986A /* LaunchScreen.storyboard */; };
+		239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D17217169C800F86A7C /* SettingsViewController.swift */; };
+		239B5D1A21716A0500F86A7C /* TotalShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */; };
+		239B5D1C21716F6E00F86A7C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2370937F21713106006B986A /* TaianeVinicius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaianeVinicius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2370938221713106006B986A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2370938421713106006B986A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2370938421713106006B986A /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		2370938721713106006B986A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2370938A21713106006B986A /* TaianeVinicius.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaianeVinicius.xcdatamodel; sourceTree = "<group>"; };
 		2370938C21713107006B986A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2370938F21713107006B986A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2370939121713107006B986A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239B5D17217169C800F86A7C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalShoppingViewController.swift; sourceTree = "<group>"; };
+		239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				2370938221713106006B986A /* AppDelegate.swift */,
-				2370938421713106006B986A /* ViewController.swift */,
+				2370938421713106006B986A /* ShoppingListViewController.swift */,
+				239B5D17217169C800F86A7C /* SettingsViewController.swift */,
 				2370938621713106006B986A /* Main.storyboard */,
+				239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */,
+				239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */,
 				2370938C21713107006B986A /* Assets.xcassets */,
 				2370938E21713107006B986A /* LaunchScreen.storyboard */,
 				2370939121713107006B986A /* Info.plist */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2370938521713106006B986A /* ViewController.swift in Sources */,
+				2370938521713106006B986A /* ShoppingListViewController.swift in Sources */,
+				239B5D1A21716A0500F86A7C /* TotalShoppingViewController.swift in Sources */,
 				2370938321713106006B986A /* AppDelegate.swift in Sources */,
 				2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */,
+				239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */,
+				239B5D1C21716F6E00F86A7C /* PurchaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
