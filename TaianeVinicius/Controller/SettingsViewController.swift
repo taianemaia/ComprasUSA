@@ -9,11 +9,23 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var tfDolarRate: UITextField!
+    @IBOutlet weak var tfIof: UITextField!
+    
+    let settings = Settings.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tfDolarRate.text = String(settings.dolarRate)
+        tfIof.text = String(settings.iof)
 
-        // Do any additional setup after loading the view.
+        print(settings.dolarRate)
     }
     
 

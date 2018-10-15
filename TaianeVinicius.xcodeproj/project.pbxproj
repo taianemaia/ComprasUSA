@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230187852174FE5D0023FE7C /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */; };
+		2301878A2174FF170023FE7C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 230187892174FF170023FE7C /* Settings.bundle */; };
+		2301878D21750CFC0023FE7C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301878C21750CFC0023FE7C /* Settings.swift */; };
+		236046B8217557E500853527 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236046B7217557E500853527 /* Purchase.swift */; };
 		2370938321713106006B986A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938221713106006B986A /* AppDelegate.swift */; };
-		2370938521713106006B986A /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938421713106006B986A /* ShoppingListViewController.swift */; };
 		2370938821713106006B986A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370938621713106006B986A /* Main.storyboard */; };
 		2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2370938921713106006B986A /* TaianeVinicius.xcdatamodeld */; };
 		2370938D21713107006B986A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2370938C21713107006B986A /* Assets.xcassets */; };
@@ -19,9 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		230187892174FF170023FE7C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		2301878C21750CFC0023FE7C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		236046B7217557E500853527 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		2370937F21713106006B986A /* TaianeVinicius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaianeVinicius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2370938221713106006B986A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2370938421713106006B986A /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		2370938721713106006B986A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2370938A21713106006B986A /* TaianeVinicius.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaianeVinicius.xcdatamodel; sourceTree = "<group>"; };
 		2370938C21713107006B986A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230187872174FED60023FE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2370938621713106006B986A /* Main.storyboard */,
+				2370938E21713107006B986A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		230187882174FEE90023FE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */,
+				239B5D17217169C800F86A7C /* SettingsViewController.swift */,
+				239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */,
+				239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2301878B21750CBF0023FE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				236046B7217557E500853527 /* Purchase.swift */,
+				2301878C21750CFC0023FE7C /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2370937621713106006B986A = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				2370938221713106006B986A /* AppDelegate.swift */,
-				2370938421713106006B986A /* ShoppingListViewController.swift */,
-				239B5D17217169C800F86A7C /* SettingsViewController.swift */,
-				2370938621713106006B986A /* Main.storyboard */,
-				239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */,
-				239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */,
+				230187882174FEE90023FE7C /* Controller */,
+				2301878B21750CBF0023FE7C /* Model */,
+				230187872174FED60023FE7C /* View */,
 				2370938C21713107006B986A /* Assets.xcassets */,
-				2370938E21713107006B986A /* LaunchScreen.storyboard */,
 				2370939121713107006B986A /* Info.plist */,
+				230187892174FF170023FE7C /* Settings.bundle */,
 				2370938921713106006B986A /* TaianeVinicius.xcdatamodeld */,
 			);
 			path = TaianeVinicius;
@@ -134,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2301878A2174FF170023FE7C /* Settings.bundle in Resources */,
 				2370939021713107006B986A /* LaunchScreen.storyboard in Resources */,
 				2370938D21713107006B986A /* Assets.xcassets in Resources */,
 				2370938821713106006B986A /* Main.storyboard in Resources */,
@@ -147,10 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2370938521713106006B986A /* ShoppingListViewController.swift in Sources */,
 				239B5D1A21716A0500F86A7C /* TotalShoppingViewController.swift in Sources */,
+				230187852174FE5D0023FE7C /* ShoppingTableViewController.swift in Sources */,
 				2370938321713106006B986A /* AppDelegate.swift in Sources */,
 				2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */,
+				236046B8217557E500853527 /* Purchase.swift in Sources */,
+				2301878D21750CFC0023FE7C /* Settings.swift in Sources */,
 				239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */,
 				239B5D1C21716F6E00F86A7C /* PurchaseViewController.swift in Sources */,
 			);
