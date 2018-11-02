@@ -20,6 +20,8 @@
 		B3E96C35218BC18600389402 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C34218BC18600389402 /* ProductTableViewController.swift */; };
 		B3E96C37218BC19C00389402 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */; };
 		B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */; };
+		B3E96C3B218BD40B00389402 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C3A218BD40B00389402 /* StateTableViewCell.swift */; };
+		B3E96C3F218BD46600389402 /* StateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C3E218BD46600389402 /* StateTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B3E96C34218BC18600389402 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
+		B3E96C3A218BD40B00389402 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		B3E96C3E218BD46600389402 /* StateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +67,14 @@
 		230187882174FEE90023FE7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B3E96C3E218BD46600389402 /* StateTableViewController.swift */,
 				B3E96C34218BC18600389402 /* ProductTableViewController.swift */,
 				B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */,
 				B3E96C32218BBA1B00389402 /* ProductViewController.swift */,
 				239B5D17217169C800F86A7C /* SettingsViewController.swift */,
 				239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */,
 				B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */,
+				B3E96C3A218BD40B00389402 /* StateTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,9 +194,11 @@
 				B3E96C35218BC18600389402 /* ProductTableViewController.swift in Sources */,
 				2370938321713106006B986A /* AppDelegate.swift in Sources */,
 				2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */,
+				B3E96C3F218BD46600389402 /* StateTableViewController.swift in Sources */,
 				2301878D21750CFC0023FE7C /* Settings.swift in Sources */,
 				B3E96C37218BC19C00389402 /* ProductTableViewCell.swift in Sources */,
 				B3E96C33218BBA1B00389402 /* ProductViewController.swift in Sources */,
+				B3E96C3B218BD40B00389402 /* StateTableViewCell.swift in Sources */,
 				B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */,
 				239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */,
 			);
