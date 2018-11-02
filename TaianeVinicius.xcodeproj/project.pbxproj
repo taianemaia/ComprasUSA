@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230187852174FE5D0023FE7C /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */; };
 		2301878A2174FF170023FE7C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 230187892174FF170023FE7C /* Settings.bundle */; };
 		2301878D21750CFC0023FE7C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301878C21750CFC0023FE7C /* Settings.swift */; };
-		236046B8217557E500853527 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236046B7217557E500853527 /* Purchase.swift */; };
 		2370938321713106006B986A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370938221713106006B986A /* AppDelegate.swift */; };
 		2370938821713106006B986A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370938621713106006B986A /* Main.storyboard */; };
 		2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2370938921713106006B986A /* TaianeVinicius.xcdatamodeld */; };
@@ -18,14 +16,15 @@
 		2370939021713107006B986A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370938E21713107006B986A /* LaunchScreen.storyboard */; };
 		239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D17217169C800F86A7C /* SettingsViewController.swift */; };
 		239B5D1A21716A0500F86A7C /* TotalShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */; };
-		239B5D1C21716F6E00F86A7C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */; };
+		B3E96C33218BBA1B00389402 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C32218BBA1B00389402 /* ProductViewController.swift */; };
+		B3E96C35218BC18600389402 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C34218BC18600389402 /* ProductTableViewController.swift */; };
+		B3E96C37218BC19C00389402 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */; };
+		B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		230187892174FF170023FE7C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2301878C21750CFC0023FE7C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		236046B7217557E500853527 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		2370937F21713106006B986A /* TaianeVinicius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaianeVinicius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2370938221713106006B986A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2370938721713106006B986A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +34,10 @@
 		2370939121713107006B986A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239B5D17217169C800F86A7C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalShoppingViewController.swift; sourceTree = "<group>"; };
-		239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		B3E96C32218BBA1B00389402 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		B3E96C34218BC18600389402 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,12 @@
 		230187882174FEE90023FE7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				230187842174FE5D0023FE7C /* ShoppingTableViewController.swift */,
+				B3E96C34218BC18600389402 /* ProductTableViewController.swift */,
+				B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */,
+				B3E96C32218BBA1B00389402 /* ProductViewController.swift */,
 				239B5D17217169C800F86A7C /* SettingsViewController.swift */,
-				239B5D1B21716F6E00F86A7C /* PurchaseViewController.swift */,
 				239B5D1921716A0500F86A7C /* TotalShoppingViewController.swift */,
+				B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -72,7 +76,6 @@
 		2301878B21750CBF0023FE7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				236046B7217557E500853527 /* Purchase.swift */,
 				2301878C21750CFC0023FE7C /* Settings.swift */,
 			);
 			path = Model;
@@ -182,13 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				239B5D1A21716A0500F86A7C /* TotalShoppingViewController.swift in Sources */,
-				230187852174FE5D0023FE7C /* ShoppingTableViewController.swift in Sources */,
+				B3E96C35218BC18600389402 /* ProductTableViewController.swift in Sources */,
 				2370938321713106006B986A /* AppDelegate.swift in Sources */,
 				2370938B21713106006B986A /* TaianeVinicius.xcdatamodeld in Sources */,
-				236046B8217557E500853527 /* Purchase.swift in Sources */,
 				2301878D21750CFC0023FE7C /* Settings.swift in Sources */,
+				B3E96C37218BC19C00389402 /* ProductTableViewCell.swift in Sources */,
+				B3E96C33218BBA1B00389402 /* ProductViewController.swift in Sources */,
+				B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */,
 				239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */,
-				239B5D1C21716F6E00F86A7C /* PurchaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TaianeVinicius/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TaianeVinicius/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
