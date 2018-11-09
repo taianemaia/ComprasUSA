@@ -16,13 +16,48 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var tfState: UITextField!
     @IBOutlet weak var tfPrice: UITextField!
     @IBOutlet weak var swCard: UISwitch!
+    @IBOutlet weak var btAddPhoto: UIButton!
     
     var product: Product!
+    lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        return pickerView
+    }()
+    var statesManager = StatesManager.shared
     
+    override func viewWillAppear(_ animated: Bool) {
+        statesManager.loadStates(with: context)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        configPickerView()
+    }
+    
+    func configPickerView() {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+        let btDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        let btFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.items = [btCancel, btFlexibleSpace, btDone]
+        
+        tfState.inputView = pickerView
+        tfState.inputAccessoryView = toolbar
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    @objc func cancel() {
+        tfState.resignFirstResponder()
+    }
+    
+    @objc func done() {
+        tfState.text = statesManager.states[pickerView.selectedRow(inComponent: 0)].name
+        cancel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +73,11 @@ class ProductViewController: UIViewController {
         product.name = tfName.text
         product.price = Double(tfPrice.text!)!
         product.onCard = swCard.isOn
+        product.image = ivImage.image
         
-        // product.image = ivImage
+        if !tfState.text!.isEmpty {
+            product.state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
+        }
        
         do {
             try context.save()
@@ -50,4 +88,62 @@ class ProductViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func addState(_ sender: Any) {
+       StateAlert.showAlert(view: self, with: nil)
+    }
+    
+    @IBAction func addImage(_ sender: Any) {
+    
+        let alert = UIAlertController(title: "Selecionar foto do produto", message: nil, preferredStyle: .actionSheet)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action: UIAlertAction) in
+                self.selectPicture(sourceType: .camera)
+            }
+            alert.addAction(cameraAction)
+        }
+        
+        let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (action: UIAlertAction) in
+            self.selectPicture(sourceType: .photoLibrary)
+        }
+        alert.addAction(libraryAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func selectPicture(sourceType: UIImagePickerControllerSourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+}
+
+extension ProductViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return statesManager.states.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let state = statesManager.states[row]
+        return state.name
+    }
+}
+
+extension ProductViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        ivImage.image = image
+        btAddPhoto.setTitle(nil, for: .normal)
+        dismiss(animated: true, completion: nil)
+    }
 }
