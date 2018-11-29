@@ -29,6 +29,9 @@ class ProductViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         statesManager.loadStates(with: context)
+        
+        configProduct()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,25 @@ class ProductViewController: UIViewController {
         configPickerView()
     }
     
+    func configProduct() {
+        if(product != nil) {
+            tfName.text = product.name
+            
+            if let image = product.image as? UIImage {
+                ivImage.image = image
+                btAddPhoto.setTitle(nil, for: .normal)
+            }
+            
+            if let state = product.state, let index = statesManager.states.index(of: state) {
+                tfState.text = state.name
+                pickerView.selectRow(index, inComponent: 0, animated: true)
+            }
+            
+            tfPrice.text = "\(product.price)" // Formatar com 2 casas
+            swCard.isOn = product.onCard  
+            // alterar label do botao
+        }
+    }
     func configPickerView() {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -89,7 +111,8 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func addState(_ sender: Any) {
-       StateAlert.showAlert(view: self, with: nil)
+        StateAlert.showAlert(view: self, with: nil)
+        statesManager.loadStates(with: context)
     }
     
     @IBAction func addImage(_ sender: Any) {

@@ -178,6 +178,7 @@
                                     <outlet property="ivImage" destination="aVT-gc-1SU" id="gt1-9u-pEJ"/>
                                     <outlet property="lbName" destination="yEn-1u-HVu" id="8rL-GK-v5U"/>
                                     <outlet property="lbPrice" destination="0hO-Nz-Fpu" id="yXu-cp-Gcn"/>
+                                    <segue destination="pUR-Ti-BHX" kind="show" identifier="editProductSegue" id="JXu-GL-i1p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,7 +190,7 @@
                     <navigationItem key="navigationItem" title="Lista de Compras" largeTitleDisplayMode="always" id="587-hu-67r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WGJ-pt-T70">
                             <connections>
-                                <segue destination="pUR-Ti-BHX" kind="show" id="go9-rr-oTc"/>
+                                <segue destination="pUR-Ti-BHX" kind="show" identifier="addProductSegue" id="go9-rr-oTc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -404,4 +405,7 @@
         <image name="bag" width="23" height="23"/>
         <image name="settings" width="23" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="go9-rr-oTc"/>
+    </inferredMetricsTieBreakers>
 </document>

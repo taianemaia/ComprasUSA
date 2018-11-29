@@ -10,7 +10,7 @@ import UIKit
 
 class StateAlert {
     
-    static func showAlert(view: UIViewController, with state: State?) {
+    static func showAlert(view: UIViewController, with state: State?)  {
         let title = state == nil ? "Adicionar Estado" : "Editar Estado"
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
@@ -33,7 +33,7 @@ class StateAlert {
             
             do {
                 try view.context.save()
-                //view.loadStates()
+               // return state
             } catch {
                 print(error.localizedDescription)
             }

@@ -21,7 +21,7 @@
 		B3E96C37218BC19C00389402 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */; };
 		B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */; };
 		B3E96C3B218BD40B00389402 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E96C3A218BD40B00389402 /* StateTableViewCell.swift */; };
-		B3F8C3FD2196169D000C8F37 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C3FC2196169D000C8F37 /* StateManager.swift */; };
+		B3F8C3FD2196169D000C8F37 /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C3FC2196169D000C8F37 /* StatesManager.swift */; };
 		B3F8C3FF219632C3000C8F37 /* StateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C3FE219632C3000C8F37 /* StateAlert.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		B3E96C36218BC19C00389402 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		B3E96C38218BC31A00389402 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		B3E96C3A218BD40B00389402 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
-		B3F8C3FC2196169D000C8F37 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		B3F8C3FC2196169D000C8F37 /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
 		B3F8C3FE219632C3000C8F37 /* StateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 		2301878B21750CBF0023FE7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8C3FC2196169D000C8F37 /* StateManager.swift */,
+				B3F8C3FC2196169D000C8F37 /* StatesManager.swift */,
 				2301878C21750CFC0023FE7C /* Settings.swift */,
 			);
 			path = Model;
@@ -202,7 +202,7 @@
 				B3E96C33218BBA1B00389402 /* ProductViewController.swift in Sources */,
 				B3E96C3B218BD40B00389402 /* StateTableViewCell.swift in Sources */,
 				B3F8C3FF219632C3000C8F37 /* StateAlert.swift in Sources */,
-				B3F8C3FD2196169D000C8F37 /* StateManager.swift in Sources */,
+				B3F8C3FD2196169D000C8F37 /* StatesManager.swift in Sources */,
 				B3E96C39218BC31A00389402 /* ViewController+CoreData.swift in Sources */,
 				239B5D18217169C800F86A7C /* SettingsViewController.swift in Sources */,
 			);

@@ -22,6 +22,15 @@ class ProductTableViewController: UITableViewController {
         loadProducts()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "editProductSegue" {
+            let view = segue.destination as! ProductViewController
+            if let products = fetchedResultController.fetchedObjects {
+                view.product = products[tableView.indexPathForSelectedRow!.row]
+            }
+        } 
+    }
+    
     func loadProducts() {
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -62,6 +71,19 @@ class ProductTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let product = fetchedResultController.fetchedObjects?[indexPath.row] else { return }
+            
+            context.delete(product)
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 extension ProductTableViewController: NSFetchedResultsControllerDelegate {
@@ -69,6 +91,9 @@ extension ProductTableViewController: NSFetchedResultsControllerDelegate {
         
         switch type {
             case .delete:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
                 break;
             default:
                 tableView.reloadData()
