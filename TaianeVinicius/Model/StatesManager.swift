@@ -20,6 +20,7 @@ class StatesManager {
         
         do {
             states = try context.fetch(fetchRequest)
+            
         } catch {
             print(error.localizedDescription)
         }

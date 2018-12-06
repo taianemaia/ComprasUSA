@@ -111,8 +111,15 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func addState(_ sender: Any) {
-        StateAlert.showAlert(view: self, with: nil)
-        statesManager.loadStates(with: context)
+        StateAlert.showAlert(view: self, with: nil, onCompletion: {(state) in
+            self.statesManager.loadStates(with: self.context)
+            self.pickerView.reloadAllComponents()
+                      
+            if let index = self.statesManager.states.index(of: state) {
+                self.tfState.text = state.name
+                self.pickerView.selectRow(index, inComponent: 0, animated: true)
+            }
+        })
     }
     
     @IBAction func addImage(_ sender: Any) {
