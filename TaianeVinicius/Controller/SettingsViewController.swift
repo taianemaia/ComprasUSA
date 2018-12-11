@@ -34,9 +34,6 @@ class SettingsViewController: UIViewController {
     @IBAction func addState(_ sender: Any) {
       //  StateAlert.showAlert(view: self, with: nil, onCompletion: (nil))
     }
-    
-    
-
 }
 
 extension SettingsViewController : UITableViewDelegate {

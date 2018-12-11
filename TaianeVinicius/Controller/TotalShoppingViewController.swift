@@ -7,24 +7,52 @@
 //
 
 import UIKit
+import CoreData
 
 class TotalShoppingViewController: UIViewController {
 
+    @IBOutlet weak var lbTotalUS: UILabel!
+    @IBOutlet weak var lbTotalRS: UILabel!
+    
+    var products: [Product] = []
+    var totalUS: Double = 0
+    var totalRS: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        loadProducts()
+        print(products)
+        calculateTotals()
     }
-    */
+    
+    func calculateTotals() {
+        totalUS = 0
+        totalRS = 0
+        
+        for product in products {
+            totalUS += product.price
+            totalRS += product.price
+        }
+        
+        lbTotalUS.text = "\(totalUS)"
+        lbTotalRS.text = "\(totalRS)"
+        
+    }
+    
+    func loadProducts() {
+        let fetchRequest : NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do {
+            products = try context.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 
 }
+
+

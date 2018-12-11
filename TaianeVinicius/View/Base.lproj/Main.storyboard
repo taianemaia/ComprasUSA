@@ -60,11 +60,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-Eq-tsY">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-Eq-tsY">
                                 <rect key="frame" x="20" y="571.66666666666663" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.24149609568635286" green="0.34723535521566889" blue="0.68652849740932642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="CADASTRAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="saveProduct:" destination="pUR-Ti-BHX" eventType="touchUpInside" id="jqJ-Du-6DY"/>
@@ -110,6 +113,7 @@
                     <navigationItem key="navigationItem" title="Produto" largeTitleDisplayMode="always" id="f4e-zR-EsZ"/>
                     <connections>
                         <outlet property="btAddPhoto" destination="gjl-QC-tRX" id="fCc-47-Wou"/>
+                        <outlet property="btSave" destination="JQW-Eq-tsY" id="9nG-jJ-QAS"/>
                         <outlet property="ivImage" destination="Yfd-Jp-hqb" id="gKY-DZ-JdB"/>
                         <outlet property="swCard" destination="kfG-fQ-omc" id="M5w-Uu-XaY"/>
                         <outlet property="tfName" destination="QXe-4a-LMQ" id="Ndi-Jq-wvK"/>
@@ -375,10 +379,14 @@
                         <viewLayoutGuide key="safeArea" id="gVN-Hs-r2S"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="bag" id="Fqw-4m-QMT"/>
+                    <connections>
+                        <outlet property="lbTotalRS" destination="MHj-Xh-2V4" id="QHi-C6-c9W"/>
+                        <outlet property="lbTotalUS" destination="g3e-ZO-dOk" id="ZXe-5v-E8F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQ5-pu-czQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="877.51124437781118"/>
+            <point key="canvasLocation" x="1008.6956521739131" y="877.17391304347836"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n1c-Qe-sMe">

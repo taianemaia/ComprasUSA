@@ -17,6 +17,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var tfPrice: UITextField!
     @IBOutlet weak var swCard: UISwitch!
     @IBOutlet weak var btAddPhoto: UIButton!
+    @IBOutlet weak var btSave: UIButton!
     
     var product: Product!
     lazy var pickerView: UIPickerView = {
@@ -31,6 +32,7 @@ class ProductViewController: UIViewController {
         statesManager.loadStates(with: context)
         
         configProduct()
+        configValidate()
         
     }
     override func viewDidLoad() {
@@ -57,7 +59,27 @@ class ProductViewController: UIViewController {
             swCard.isOn = product.onCard  
             // alterar label do botao
         }
+      
+        configValidate()
     }
+    
+    func configValidate() {
+        btSave.isEnabled = self.enableButton()
+        
+        NotificationCenter.default.addObserver(forName: .UITextFieldTextDidChange, object: nil, queue: OperationQueue.main, using: {_ in
+         
+            self.btSave.isEnabled = self.enableButton()
+         
+        })
+    }
+    
+    func enableButton() -> Bool {
+        return tfName.text!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
+            && tfPrice.text!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
+            && tfState.text!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
+        
+    }
+    
     func configPickerView() {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -114,7 +136,7 @@ class ProductViewController: UIViewController {
         StateAlert.showAlert(view: self, with: nil, onCompletion: {(state) in
             self.statesManager.loadStates(with: self.context)
             self.pickerView.reloadAllComponents()
-                      
+            
             if let index = self.statesManager.states.index(of: state) {
                 self.tfState.text = state.name
                 self.pickerView.selectRow(index, inComponent: 0, animated: true)
