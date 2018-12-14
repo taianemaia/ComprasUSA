@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsViewController: UIViewController {
     
@@ -32,12 +33,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func addState(_ sender: Any) {
-      //  StateAlert.showAlert(view: self, with: nil, onCompletion: (nil))
+        StateAlert.showAlert(view: self, with: nil, onCompletion: {(state) in
+            self.loadStates()
+            self.stateTableView.reloadData()
+        })
     }
-}
-
-extension SettingsViewController : UITableViewDelegate {
-    
 }
 
 extension SettingsViewController : UITableViewDataSource {
@@ -53,4 +53,34 @@ extension SettingsViewController : UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let state = statesManager.states[indexPath.row]
+            
+            context.delete(state)
+            
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
+
+extension SettingsViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .delete:
+            if let indexPath = indexPath {
+                stateTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            break;
+        default:
+            stateTableView.reloadData()
+        }
+    }
+}
+

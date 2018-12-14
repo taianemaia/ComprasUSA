@@ -18,7 +18,11 @@ class Settings {
     
     var iof: Double {
         get {
-            return defaults.double(forKey: "iof")
+            if defaults.double(forKey: "iof") > 0 {
+                return defaults.double(forKey: "iof")
+            } else {
+                return 6.38
+            }
         }
         set {
             defaults.set(newValue, forKey: "iof")
@@ -27,7 +31,11 @@ class Settings {
     
     var dolarRate: Double {
         get {
-            return defaults.double(forKey: "dolarRate")
+            if defaults.double(forKey: "dolarRate") > 0 {
+                return defaults.double(forKey: "dolarRate")
+            } else {
+                return 3.9
+            }
         }
         set {
             defaults.set(newValue, forKey: "dolarRate")

@@ -14,6 +14,7 @@ class TotalShoppingViewController: UIViewController {
     @IBOutlet weak var lbTotalUS: UILabel!
     @IBOutlet weak var lbTotalRS: UILabel!
     
+    let settings = Settings.shared
     var products: [Product] = []
     var totalUS: Double = 0
     var totalRS: Double = 0
@@ -25,21 +26,29 @@ class TotalShoppingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loadProducts()
-        print(products)
         calculateTotals()
     }
     
     func calculateTotals() {
         totalUS = 0
         totalRS = 0
+        var iof: Double
+        var tax: Double
         
         for product in products {
             totalUS += product.price
-            totalRS += product.price
+            
+            tax = (product.state?.tax)! / 100 + 1
+            
+            if product.onCard {
+                iof = settings.iof / 100 + 1
+            } else {
+                iof = 1
+            }
+            totalRS += product.price *  tax * settings.dolarRate * iof
         }
-        
-        lbTotalUS.text = "\(totalUS)"
-        lbTotalRS.text = "\(totalRS)"
+        lbTotalUS.text = String(format: "%.2f", totalUS)
+        lbTotalRS.text = String(format: "%.2f", totalRS)
         
     }
     

@@ -50,7 +50,7 @@ class StateAlert {
         }
         
         alert.addTextField { (textField) in
-            textField.placeholder = "IOF"
+            textField.placeholder = "Imposto"
             textField.keyboardType = .decimalPad
             
             NotificationCenter.default.addObserver(forName: .UITextFieldTextDidChange, object: textField, queue: OperationQueue.main, using:

@@ -26,15 +26,6 @@ class StatesManager {
         }
     }
     
-    func deleteState(index: Int, context: NSManagedObjectContext) {
-        context.delete(states[index])
-        
-        do  {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
     /*
     func addState(state: State) {
         let alert = UIAlertController(title: "Adicionar Estado", message: nil, preferredStyle: .alert)

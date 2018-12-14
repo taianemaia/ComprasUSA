@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+     //   UserDefaults.standard.register(defaults: ["iof": defaults.double(forKey: "iof")])
+      //  UserDefaults.standard.register(defaults: ["iof" : 6.38])
+        
+        
         return true
     }
 
